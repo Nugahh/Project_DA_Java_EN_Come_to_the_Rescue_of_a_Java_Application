@@ -2,8 +2,8 @@ package com.hemebiotech.analytics;
 
 import java.util.Map;
 
-public interface ISendResult<E> {
+public interface ISendResult {
 	
-	public void fileWriter(Map<E, Integer> map);
+	public void fileWriter(Map<String, Integer> map);
 
 }

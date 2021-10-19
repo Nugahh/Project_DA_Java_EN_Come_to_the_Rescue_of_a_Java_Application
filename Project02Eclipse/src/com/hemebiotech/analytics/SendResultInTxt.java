@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class SendResultInTxt implements ISendResult<String> {
+public class SendResultInTxt implements ISendResult {
 
 	@Override
 	public void fileWriter(Map<String, Integer> map) {
