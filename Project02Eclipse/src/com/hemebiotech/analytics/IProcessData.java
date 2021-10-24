@@ -3,8 +3,8 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 
-public interface IProcessData<E> {
+public interface IProcessData {
 	
-	public Map<E, Integer> toSortedMap(List<E> list);
+	public Map<String, Integer> toSortedMap(List<String> list);
 	
 }

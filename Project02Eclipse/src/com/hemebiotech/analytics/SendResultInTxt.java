@@ -10,7 +10,7 @@ public class SendResultInTxt implements ISendResult {
 	public void fileWriter(Map<String, Integer> map) {
 		// TODO Auto-generated method stub
 		try {
-			FileWriter writer = new FileWriter("result.txt");
+			FileWriter writer = new FileWriter("result.out");
 			for (Map.Entry<String, Integer> entry : map.entrySet()) {
 				String key = entry.getKey();
 				Integer value = entry.getValue();
