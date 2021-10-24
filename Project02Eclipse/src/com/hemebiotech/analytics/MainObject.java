@@ -19,7 +19,7 @@ public class MainObject {
 		return this.reader.getSymptoms();
 	}
 
-	public Map<String, Integer> processData(List<String> list) {
+	public Map<String, Integer> toSortedMap(List<String> list) {
 		return this.process.toSortedMap(list);
 	}
 
