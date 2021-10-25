@@ -8,23 +8,22 @@ public class MainObject {
 	private IProcessData process;
 	private ISendResult sendData;
 
-	
-	public MainObject(ReadSymptomDataFromFile readSymptomDataFromFile) {
-		this.reader = readSymptomDataFromFile;
-		this.process = new ProcessData();
-		this.sendData = new SendResultInTxt();
+	public MainObject(ISymptomReader reader, IProcessData process, ISendResult sendData) {
+		this.reader = reader;
+		this.process = process;
+		this.sendData = sendData;
 	}
 
 	public List<String> getSymptoms() {
-		return this.reader.getSymptoms();
+		return this.reader.getSymptoms(); // a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
 	}
 
 	public Map<String, Integer> toSortedMap(List<String> list) {
-		return this.process.toSortedMap(list);
+		return this.process.toSortedMap(list); // une liste trié alphabétiquement et compté pour chaque répétition
 	}
 
 	public void send(Map<String, Integer> map) {
-		this.sendData.fileWriter(map);
+		this.sendData.fileWriter(map); // parcourt une map pour en générer un fichier
 	}
 
 }
