@@ -3,12 +3,12 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 
-public class MainObject {
+public class Analyse {
 	private ISymptomReader reader;
 	private IProcessData process;
 	private ISendResult sendData;
 
-	public MainObject(ISymptomReader reader, IProcessData process, ISendResult sendData) {
+	public Analyse(ISymptomReader reader, IProcessData process, ISendResult sendData) {
 		this.reader = reader;
 		this.process = process;
 		this.sendData = sendData;
@@ -19,7 +19,7 @@ public class MainObject {
 	}
 
 	public Map<String, Integer> toSortedMap(List<String> list) {
-		return this.process.toSortedMap(list); // une liste trié alphabétiquement et compté pour chaque répétition
+		return this.process.toSortedMap(list); // trie alphabétiquement à partir d'une liste de String et incrémente de 1 pour chaque répétition
 	}
 
 	public void send(Map<String, Integer> map) {

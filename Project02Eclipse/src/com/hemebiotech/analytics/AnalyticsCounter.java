@@ -9,11 +9,11 @@ public class AnalyticsCounter {
 
 	public static void main(String args[]) {
 
-		MainObject mainObject = new MainObject(new ReadSymptomDataFromFile(inputFile), new ProcessData(), new SendResultInTxt());
+		Analyse analyse = new Analyse(new ReadSymptomDataFromFile(inputFile), new ProcessData(), new SendResultInTxt());
 
-		List<String> list = mainObject.getSymptoms();
-		Map<String, Integer> map = mainObject.toSortedMap(list);
-		mainObject.send(map);
+		List<String> list = analyse.getSymptoms();
+		Map<String, Integer> map = analyse.toSortedMap(list);
+		analyse.send(map);
 		System.out.print(map);
 
 	}

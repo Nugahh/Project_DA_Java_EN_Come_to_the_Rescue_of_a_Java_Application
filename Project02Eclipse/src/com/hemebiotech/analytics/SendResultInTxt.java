@@ -13,7 +13,7 @@ public class SendResultInTxt implements ISendResult {
 
 		try {
 			FileWriter writer = new FileWriter(outputFile);
-			for (Map.Entry<String, Integer> entry : map.entrySet()) {
+			for (Map.Entry<String, Integer> entry : map.entrySet()) { // return un Set des clés et valeurs présente dans une map
 				String key = entry.getKey();
 				Integer value = entry.getValue();
 
